@@ -26,7 +26,6 @@ function onDeviceReady() {
     //LoginButton onclick function
     $("#loginButton").click(function(){
       let pinInput = $("#pin").val();
-      let pinList = [1234,1111];
       //We identify the API to be used
       let usedAPI;
       switch($("#selectAPI option:selected").val()){
@@ -51,8 +50,12 @@ function onDeviceReady() {
           alert("Error: Introdueix el pin correcte");
         }
         else{
-          alert("PIN Correcto");
-          //location.href = './app.html';
+          //Setting localStorage with the id and pin
+          localStorage.setItem("api",usedAPI);
+          localStorage.setItem("pin",pinInput);
+          localStorage.setItem("exerciseID",data["VRexerciseID"]);
+          location.href = './app.html';
+          
         }
       }).fail(function () {
         console.log("ERROR: La peticion AJAX no ha salido como se esperaba");
