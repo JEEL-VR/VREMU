@@ -66,3 +66,9 @@ p {
 footer.page-footer {
   margin: 0;
 }
+.api_hidden{
+  visibility: hidden;
+}
+.api_show{
+  visibility: visible;
+}

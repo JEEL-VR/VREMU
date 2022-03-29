@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- CSS  -->
-    <style>
-        body{
-            background: rgb(230,100,101);
-            background: linear-gradient(135deg, rgba(230,100,101,1) 28%, rgba(145,152,229,1) 61%);       }  
-    </style>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -18,27 +13,41 @@
 <!-- Page Body  -->
 <body>
     <div class="row">
-        <h1 style="color: white;">Inici de sessió</h1>
+      <center>
+        <img src="/img/vr_logo.png" width="50%" height="auto">
+        <h1>Inici de sessió</h1>
+      </center>
         <form class="col s12">
           <div class="row">
             <div class="input-field col s12" >
               <select id="selectAPI" style="color: white;">
                 <option value="1" selected >JEEL API</option>
-                <option value="2">Unknown API 1</option>
-                <option value="3">Unknown API 2</option>
+                <option value="2">API Alternativa</option>
               </select>
               <label>API</label>
             </div>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input placeholder="Pin" id="pin" type="text" class="validate" style="color: white;">
-              <label for="pin">Pin</label>
+          <div style="background-color: #DEEFE7;">
+            <div class="row" style="margin: 10px;">
+              <div class="input-field col s12">
+                <input placeholder="Pin" id="pin" type="text" class="validate" style="color: white;">
+                <label for="pin">Pin</label>
+              </div>
             </div>
           </div>
+          <div id="customAPI" class="api_hidden" style="background-color: #DEEFE7;">
+            <div class="row" style="margin: 10px;">
+              <div class="input-field col s12">
+                <input placeholder="Url API" id="urlAPI" type="text" class="validate">
+                <label for="apiAlternativa">API alternativa:</label>
+              </div>
+            </div>
+          </div>
+          <center>
           <button id="loginButton" class="btn waves-effect waves-light">Entrar
             <i class="material-icons right">send</i>
         </button>
+      </center>
         </form>
         
     </div>
