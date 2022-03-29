@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src https://code.jquery.com https://fonts.gstatic.com 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' data: https://classvr-room-api.herokuapp.com ; style-src https://fonts.googleapis.com 'self' 'unsafe-inline'; media-src *; img-src 'self' * data: content:;">  <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <title>Document</title>
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -12,11 +15,61 @@
 </head>
 <!-- Page Body  -->
 <body>
-    <h1>VRAPP Example</h1>
+    <div class="row" style="margin-top: 5%;">
+        <h1 id="pinText">Resultats de la prova</h1>
+        <form class="col s12">
+            <div class="row">
+                <div style="background-color: #DEEFE7;">
+                    <div class="row" style="margin: 10px;">
+                        <div class="input-field col s12">
+                            <input placeholder="Passed items" id="passed_items" type="number" class="validate" required>
+                            <label for="pi">Passed items</label>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="row">
+                <div style="background-color: #DEEFE7;">
+                    <div class="row" style="margin: 10px;">
+                        <div class="input-field col s12">
+                            <input placeholder="Failed items" id="failed_items" type="number" class="validate" required>
+                            <label for="fi">Failed items</label>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="row">
+                <div style="background-color: #DEEFE7;">
+                    <div class="row" style="margin: 10px;">
+                        <div class="input-field col s12">
+                            <input placeholder="Score" id="score" type="number" class="validate" required>
+                            <label for="sc">Score</label>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        <center>
+            <button id="sendButton" class="btn waves-effect waves-light">Enviar
+            <i class="material-icons right">send</i>
+            </button>
+        </center>
+        </form>
+    </div>
+    <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4 id="titleModal">Informació</h4>
+      <p id="descModal">Alguna cosa no ha sortit com deuria</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Aceptar</a>
+    </div>
+  </div>
     <!--  Scripts-->
     <script src="cordova.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
