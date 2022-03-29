@@ -22,7 +22,7 @@
                 <div style="background-color: #DEEFE7;">
                     <div class="row" style="margin: 10px;">
                         <div class="input-field col s12">
-                            <input placeholder="Passed items" id="passed_items" type="number" class="validate">
+                            <input placeholder="Passed items" id="passed_items" type="number" class="validate" required>
                             <label for="pi">Passed items</label>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                 <div style="background-color: #DEEFE7;">
                     <div class="row" style="margin: 10px;">
                         <div class="input-field col s12">
-                            <input placeholder="Failed items" id="failed_items" type="number" class="validate">
+                            <input placeholder="Failed items" id="failed_items" type="number" class="validate" required>
                             <label for="fi">Failed items</label>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                 <div style="background-color: #DEEFE7;">
                     <div class="row" style="margin: 10px;">
                         <div class="input-field col s12">
-                            <input placeholder="Score" id="score" type="number" class="validate">
+                            <input placeholder="Score" id="score" type="number" class="validate" required>
                             <label for="sc">Score</label>
                         </div>
                     </div>
@@ -55,6 +55,16 @@
         </center>
         </form>
     </div>
+    <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4 id="titleModal">Informació</h4>
+      <p id="descModal">Alguna cosa no ha sortit com deuria</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Aceptar</a>
+    </div>
+  </div>
     <!--  Scripts-->
     <script src="cordova.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
