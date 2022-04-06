@@ -21,22 +21,22 @@ $( document ).ready(function() {
                                             "VRexerciseID": vrexerciseid}),
         }).done(function (data) {
           //Info alert
-          $('#titleModal').text("Informació");
-          $('#descModal').text("S'han enviat les dades correctament");
+          $('#titleModal').text("Información");
+          $('#descModal').text("Se han enviado los datos correctamente");
           $('#modal1').modal();
           $('#modal1').modal('open');
         }).fail(function () {
           console.log("ERROR: La peticion AJAX no ha salido como se esperaba");
           //Fail alert
           $('#titleModal').text("Error");
-          $('#descModal').text("No s'han pogut enviar les dades.");
+          $('#descModal').text("No se han podido enviar los datos.");
           $('#modal1').modal();
           $('#modal1').modal('open');
         });
       }else{
         //Fail alert
         $('#titleModal').text("Error");
-        $('#descModal').text("Has d'omplir tots els camps.");
+        $('#descModal').text("Tienes que rellenar todos los campos.");
         $('#modal1').modal();
         $('#modal1').modal('open');
       }
