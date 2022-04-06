@@ -47,7 +47,7 @@ function onDeviceReady() {
         console.log(data);
         //We check if the token is valid 
         if(data=="incorrect pin"){
-          alert("Error: Introdueix el pin correcte");
+          alert("Error: Introduce un PIN correcto");
         }
         else{
           //Setting localStorage with the id and pin
@@ -59,7 +59,7 @@ function onDeviceReady() {
         }
       }).fail(function () {
         console.log("ERROR: La peticion AJAX no ha salido como se esperaba");
-        alert("ERROR: Les dades son incorrectes")
+        alert("ERROR: Los datos son incorrectos")
       });
       
       //Page reload prevention
